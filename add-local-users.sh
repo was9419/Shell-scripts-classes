@@ -13,12 +13,12 @@ read -p "Enter the initial password: " PASSWORD
 adduser -c "${NAME}" -m ${USER_NAME} 
 echo ${PASSWORD} | passwd --stdin ${USER_NAME}
 passwd -e ${USER_NAME} 
-# Inform if account was succesfully created otherwise exit 1 status as return 
+# Inform if account was successfully created otherwise exit 1 status as return 
 if [[ adduser -eq 0 ]]
 then
-	echo "User ${USER_NAME} was succesfully created"
+	echo "User ${USER_NAME} was successfully created"
 else
-	echo "User creatiion failed, please try again" 
+	echo "User creation failed, please try again" 
 	exit 
 fi
 # Display username, password and host where account was created, staff can copy the output to deliver information to account holder 
